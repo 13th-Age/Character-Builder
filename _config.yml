@@ -1,0 +1,5 @@
+title: "13th Age: Character Builder"
+titles_from_headings:
+    enabled: false
+plugins:
+    - jekyll-sitemap
