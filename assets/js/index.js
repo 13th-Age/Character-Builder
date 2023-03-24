@@ -22,7 +22,7 @@ function DecreaseNumber(elem) {
 
 
 function IncreaseAttribute(attr) {
-	IncraseNumber(attr + "Attribute");
+	IncreaseNumber(attr + "Attribute");
 
 	UpdateAttributeDerivatives(attr);
 }
