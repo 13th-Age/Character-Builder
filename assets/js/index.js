@@ -1,44 +1,16 @@
 function DecreaseAttribute(attr) {
-	DecreaseNumber(attr + "Attribute");
+	document.getElementById(attr + "Attribute").stepDown(1);
 
 	UpdateAttributeDerivatives(attr);
-}
-
-
-
-
-function DecreaseNumber(elem) {
-	var input = parseInt(document.getElementById(elem).value);
-	var min = parseInt(document.getElementById(elem).min);
-
-	if (input == min) {
-		return
-	}
-
-	document.getElementById(elem).value = input - 1;
 }
 
 
 
 
 function IncreaseAttribute(attr) {
-	IncreaseNumber(attr + "Attribute");
+	document.getElementById(attr + "Attribute").stepUp(1);
 
 	UpdateAttributeDerivatives(attr);
-}
-
-
-
-
-function IncreaseNumber(elem) {
-	var input = parseInt(document.getElementById(elem).value);
-	var max = parseInt(document.getElementById(elem).max);
-
-	if (input == max) {
-		return
-	}
-
-	document.getElementById(elem).value = input + 1;
 }
 
 
