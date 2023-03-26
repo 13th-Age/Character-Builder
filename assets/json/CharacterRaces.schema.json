@@ -1,0 +1,72 @@
+{
+	"type": "array"
+	, "title": "Character Races"
+	, "format": "tabs"
+	, "uniqueItems": true
+	, "items": {
+		"type": "object"
+		, "title": "Character Race"
+		, "headerTemplate": "{{ self.name }}"
+		, "required": [
+			"name"
+			, "code"
+		]
+		, "properties": {
+			"name": {
+				"type": "string"
+				, "title": "Name"
+				, "minLength": 1
+			}
+			, "code": {
+				"type": "string"
+				, "title": "Code"
+				, "minLength": 1
+			}
+			, "attributeBonuses": {
+				"type": "object"
+				, "title": "Attribute Bonuses"
+				, "format": "grid-strict"
+				, "required": [
+					"isStrength"
+					, "isConstitution"
+					, "isDexterity"
+					, "isIntelligence"
+					, "isWisdom"
+					, "isCharisma"
+				]
+				, "properties": {
+					"isStrength": {
+						"type": "boolean"
+						, "title": "Strength"
+						, "format": "checkbox"
+					}
+					, "isConstitution": {
+						"type": "boolean"
+						, "title": "Constitution"
+						, "format": "checkbox"
+					}
+					, "isDexterity": {
+						"type": "boolean"
+						, "title": "Dexterity"
+						, "format": "checkbox"
+					}
+					, "isIntelligence": {
+						"type": "boolean"
+						, "title": "Intelligence"
+						, "format": "checkbox"
+					}
+					, "isWisdom": {
+						"type": "boolean"
+						, "title": "Wisdom"
+						, "format": "checkbox"
+					}
+					, "isCharisma": {
+						"type": "boolean"
+						, "title": "Charisma"
+						, "format": "checkbox"
+					}
+				}
+			}
+		}
+	}
+}

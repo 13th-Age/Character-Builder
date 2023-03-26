@@ -1,0 +1,157 @@
+[{
+		"name": "Dark elf"
+		, "code": "DarkElf"
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": false
+			, "isDexterity": true
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Dragonic/Dragonspawn"
+		, "code": "Dragonic"
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": false
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Dwarf"
+		, "code": "Dwarf"
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": true
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": true
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Forgeborn/Dwarf-forged"
+		, "code": "Forgeborn"
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": true
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Gnome"
+		, "code": "Gnome"
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": false
+			, "isDexterity": true
+			, "isIntelligence": true
+			, "isWisdom": false
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Half-elf"
+		, "code": "HalfElf"
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": true
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Half-orc"
+		, "code": "HalfOrc"
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": false
+			, "isDexterity": true
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Halfling"
+		, "code": "Halfling"
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": true
+			, "isDexterity": true
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "High elf"
+		, "code": "HighElf"
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": false
+			, "isDexterity": false
+			, "isIntelligence": true
+			, "isWisdom": false
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Holy One/Aasimar"
+		, "code": "Aasimar"
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": false
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": true
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Human"
+		, "code": "Human"
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": true
+			, "isDexterity": true
+			, "isIntelligence": true
+			, "isWisdom": true
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Tiefling/Demontouched"
+		, "code": "Tiefling"
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": false
+			, "isDexterity": false
+			, "isIntelligence": true
+			, "isWisdom": false
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Wood elf"
+		, "code": "WoodElf"
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": false
+			, "isDexterity": true
+			, "isIntelligence": false
+			, "isWisdom": true
+			, "isCharisma": false
+		}
+	}
+]
