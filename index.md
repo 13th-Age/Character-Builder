@@ -18,8 +18,7 @@
 						type="number"
 						id="StrengthAttribute"
 						value="10" min="8" max="18"
-						onchange="UpdateAttributeDerivatives('Strength')"
-						aria-label="Strength Attribute">
+						onchange="UpdateAttributeDerivatives('Strength')">
 					<button class="btn btn-outline-secondary"
 						type="button"
 						onclick="IncreaseAttribute('Strength')">+</button>
@@ -28,8 +27,7 @@
 			<div class="col d-none d-sm-block col-sm-2 col-md-1 text-center"
 				id="StrengthMod"></div>
 			<div class="col col-3 col-md-2 col-xl-1 text-center"
-				id="StrengthPointBuy"
-				aria-label="Strength Point Buy"></div>
+				id="StrengthPointBuy"></div>
 			<div class="w-100"></div>
 
 			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">Constitution</div>
@@ -42,8 +40,7 @@
 						type="number"
 						id="ConstitutionAttribute"
 						value="10" min="8" max="18"
-						onchange="UpdateAttributeDerivatives('Constitution')"
-						aria-label="Constitution Attribute">
+						onchange="UpdateAttributeDerivatives('Constitution')">
 					<button class="btn btn-outline-secondary"
 						type="button"
 						onclick="IncreaseAttribute('Constitution')">+</button>
@@ -52,8 +49,7 @@
 			<div class="col d-none d-sm-block col-sm-2 col-md-1 text-center"
 				id="ConstitutionMod"></div>
 			<div class="col col-3 col-md-2 col-xl-1 text-center"
-				id="ConstitutionPointBuy"
-				aria-label="Constitution Point Buy"></div>
+				id="ConstitutionPointBuy"></div>
 			<div class="w-100"></div>
 
 			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">Dexterity</div>
@@ -66,8 +62,7 @@
 						type="number"
 						id="DexterityAttribute"
 						value="10" min="8" max="18"
-						onchange="UpdateAttributeDerivatives('Dexterity')"
-						aria-label="Dexterity Attribute">
+						onchange="UpdateAttributeDerivatives('Dexterity')">
 					<button class="btn btn-outline-secondary"
 						type="button"
 						onclick="IncreaseAttribute('Dexterity')">+</button>
@@ -76,8 +71,7 @@
 			<div class="col d-none d-sm-block col-sm-2 col-md-1 text-center"
 				id="DexterityMod"></div>
 			<div class="col col-3 col-md-2 col-xl-1 text-center"
-				id="DexterityPointBuy"
-				aria-label="Dexterity Point Buy"></div>
+				id="DexterityPointBuy"></div>
 			<div class="w-100"></div>
 
 			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">Intelligence</div>
@@ -90,8 +84,7 @@
 						type="number"
 						id="IntelligenceAttribute"
 						value="10" min="8" max="18"
-						onchange="UpdateAttributeDerivatives('Intelligence')"
-						aria-label="Intelligence Attribute">
+						onchange="UpdateAttributeDerivatives('Intelligence')">
 					<button class="btn btn-outline-secondary"
 						type="button"
 						onclick="IncreaseAttribute('Intelligence')">+</button>
@@ -100,8 +93,7 @@
 			<div class="col d-none d-sm-block col-sm-2 col-md-1 text-center"
 				id="IntelligenceMod"></div>
 			<div class="col col-3 col-md-2 col-xl-1 text-center"
-				id="IntelligencePointBuy"
-				aria-label="Intelligence Point Buy"></div>
+				id="IntelligencePointBuy"></div>
 			<div class="w-100"></div>
 
 			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">Wisdom</div>
@@ -114,8 +106,7 @@
 						type="number"
 						id="WisdomAttribute"
 						value="10" min="8" max="18"
-						onchange="UpdateAttributeDerivatives('Wisdom')"
-						aria-label="Wisdom Attribute">
+						onchange="UpdateAttributeDerivatives('Wisdom')">
 					<button class="btn btn-outline-secondary"
 						type="button"
 						onclick="IncreaseAttribute('Wisdom')">+</button>
@@ -124,8 +115,7 @@
 			<div class="col d-none d-sm-block col-sm-2 col-md-1 text-center"
 				id="WisdomMod"></div>
 			<div class="col col-3 col-md-2 col-xl-1 text-center"
-				id="WisdomPointBuy"
-				aria-label="Wisdom Point Buy"></div>
+				id="WisdomPointBuy"></div>
 			<div class="w-100"></div>
 
 			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">Charisma</div>
@@ -138,8 +128,7 @@
 						type="number"
 						id="CharismaAttribute"
 						value="10" min="8" max="18"
-						onchange="UpdateAttributeDerivatives('Charisma')"
-						aria-label="Charisma Attribute">
+						onchange="UpdateAttributeDerivatives('Charisma')">
 					<button class="btn btn-outline-secondary"
 						type="button"
 						onclick="IncreaseAttribute('Charisma')">+</button>
@@ -148,8 +137,7 @@
 			<div class="col d-none d-sm-block col-sm-2 col-md-1 text-center"
 				id="CharismaMod"></div>
 			<div class="col col-3 col-md-2 col-xl-1 text-center"
-				id="CharismaPointBuy"
-				aria-label="Charisma Point Buy"></div>
+				id="CharismaPointBuy"></div>
 			<div class="w-100"></div>
 
 			<div class="col col-9 col-md-6 col-lg-5 col-xxl-4 text-end">Total</div>
@@ -168,10 +156,7 @@
 	<button type="button"
 		class="navbar-toggler"
 		data-bs-toggle="collapse"
-		data-bs-target="#navbarToggle"
-		aria-controls="navbarToggle"
-		aria-expanded="false"
-		aria-label="Toggle navigation">
+		data-bs-target="#navbarToggle">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse"
