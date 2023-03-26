@@ -18,12 +18,9 @@ function IncreaseAttribute(attr) {
 
 function UpdateAttributeDerivatives(attr) {
 	var stat = parseInt(document.getElementById(attr + "Attribute").value);
+	var mod = Math.floor((stat-10)/2);
 
-	var mod;
 	var pointBuy;
-	var pointBuyTotal;
-
-	mod = Math.floor((stat-10)/2)
 
 	document.getElementById(attr + "Mod").innerHTML = (mod >= 0 ? "+" : "") + String(mod);
 
@@ -47,14 +44,12 @@ function UpdateAttributeDerivatives(attr) {
 
 	document.getElementById(attr + "PointBuy").innerHTML = pointBuy;
 
-	pointBuyTotal = parseInt(document.getElementById("StrengthPointBuy").innerHTML)
+	document.getElementById("PointBuyTotal").innerHTML = parseInt(document.getElementById("StrengthPointBuy").innerHTML)
 		+ parseInt(document.getElementById("ConstitutionPointBuy").innerHTML)
 		+ parseInt(document.getElementById("DexterityPointBuy").innerHTML)
 		+ parseInt(document.getElementById("IntelligencePointBuy").innerHTML)
 		+ parseInt(document.getElementById("WisdomPointBuy").innerHTML)
 		+ parseInt(document.getElementById("CharismaPointBuy").innerHTML);
-
-	document.getElementById("PointBuyTotal").innerHTML = pointBuyTotal;
 }
 
 
