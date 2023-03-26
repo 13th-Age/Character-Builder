@@ -1,0 +1,118 @@
+[{
+		"name": "Barbarian"
+		, "code": "Barbarian"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": true
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Bard"
+		, "code": "Bard"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": false
+			, "isDexterity": true
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Cleric"
+		, "code": "Cleric"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": false
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": true
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Fighter"
+		, "code": "Fighter"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": true
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Paladin"
+		, "code": "Paladin"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": false
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Ranger"
+		, "code": "Ranger"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": true
+			, "isConstitution": false
+			, "isDexterity": true
+			, "isIntelligence": false
+			, "isWisdom": true
+			, "isCharisma": false
+		}
+	}
+	, {
+		"name": "Rogue"
+		, "code": "Rogue"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": false
+			, "isDexterity": true
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Sorcerer"
+		, "code": "Sorcerer"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": true
+			, "isDexterity": false
+			, "isIntelligence": false
+			, "isWisdom": false
+			, "isCharisma": true
+		}
+	}
+	, {
+		"name": "Wizard"
+		, "code": "Wizard"
+		, "numAttributeBonuses": 1
+		, "attributeBonuses": {
+			"isStrength": false
+			, "isConstitution": false
+			, "isDexterity": false
+			, "isIntelligence": true
+			, "isWisdom": true
+			, "isCharisma": false
+		}
+	}
+]
