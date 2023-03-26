@@ -1,3 +1,25 @@
+function AttributeModalOpen(attr) {
+	document.getElementById("AttributeModalLabel").innerHTML = attr + " Attribute";
+	document.getElementById("AttributeModalAttribute").value = document.getElementById(attr + "Attribute").value;
+	document.getElementById("AttributeModalSaveButton").setAttribute("onclick","AttributeModalSave('" + attr + "')");
+
+	UpdateAttributeDerivatives("AttributeModal");
+}
+
+
+
+
+function AttributeModalSave(attr) {
+	var base = document.getElementById("AttributeModalAttribute").value;
+
+	document.getElementById(attr + "StatButtonForXS").innerHTML = base;
+	document.getElementById(attr + "Attribute").value = base;
+	UpdateAttributeDerivatives(attr);
+}
+
+
+
+
 function DecreaseAttribute(attr) {
 	document.getElementById(attr + "Attribute").stepDown(1);
 
@@ -16,12 +38,24 @@ function IncreaseAttribute(attr) {
 
 
 
+function ShowPointBuyToggle() {
+	Array.from(document.getElementsByClassName("ShowPointBuy")).forEach((item, i) => {
+		item.classList.toggle("d-none");
+	});
+}
+
+
+
+
 function UpdateAttributeDerivatives(attr) {
 	var stat = parseInt(document.getElementById(attr + "Attribute").value);
 	var mod = Math.floor((stat-10)/2);
 
 	var pointBuy;
 
+	if (attr != "AttributeModal") {
+		document.getElementById(attr + "StatButtonForXS").innerHTML = stat;
+	}
 	document.getElementById(attr + "Mod").innerHTML = (mod >= 0 ? "+" : "") + String(mod);
 
 	switch(stat) {
