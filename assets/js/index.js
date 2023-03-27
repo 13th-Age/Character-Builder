@@ -1,6 +1,28 @@
+function AttributeBonusModalOpen(attr) {
+	document.getElementById("AttributeBonusModalLabel").innerHTML = attr + " Bonuses";
+	document.getElementById("AttributeBonusRacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
+	document.getElementById("AttributeBonusClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
+	document.getElementById("AttributeBonusModalSaveButton").setAttribute("onclick","AttributeBonusModalSave('" + attr + "')");
+}
+
+
+
+
+function AttributeBonusModalSave(attr) {
+	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeBonusRacialBonusCheck").checked;
+	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeBonusClassBonusCheck").checked;
+
+	UpdateAttributeDerivatives(attr);
+}
+
+
+
+
 function AttributeModalOpen(attr) {
 	document.getElementById("AttributeModalLabel").innerHTML = attr + " Attribute";
-	document.getElementById("AttributeModalAttribute").value = document.getElementById(attr + "Attribute").value;
+	document.getElementById("AttributeModalBase").value = document.getElementById(attr + "Base").value;
+	document.getElementById("AttributeModalRacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
+	document.getElementById("AttributeModalClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
 	document.getElementById("AttributeModalSaveButton").setAttribute("onclick","AttributeModalSave('" + attr + "')");
 
 	UpdateAttributeDerivatives("AttributeModal");
@@ -10,10 +32,10 @@ function AttributeModalOpen(attr) {
 
 
 function AttributeModalSave(attr) {
-	var base = document.getElementById("AttributeModalAttribute").value;
+	document.getElementById(attr + "Base").value = document.getElementById("AttributeModalBase").value;
+	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeModalRacialBonusCheck").checked;
+	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeModalClassBonusCheck").checked;
 
-	document.getElementById(attr + "StatButtonForXS").innerHTML = base;
-	document.getElementById(attr + "Attribute").value = base;
 	UpdateAttributeDerivatives(attr);
 }
 
@@ -21,7 +43,7 @@ function AttributeModalSave(attr) {
 
 
 function DecreaseAttribute(attr) {
-	document.getElementById(attr + "Attribute").stepDown(1);
+	document.getElementById(attr + "Base").stepDown(1);
 
 	UpdateAttributeDerivatives(attr);
 }
@@ -30,7 +52,7 @@ function DecreaseAttribute(attr) {
 
 
 function IncreaseAttribute(attr) {
-	document.getElementById(attr + "Attribute").stepUp(1);
+	document.getElementById(attr + "Base").stepUp(1);
 
 	UpdateAttributeDerivatives(attr);
 }
@@ -39,8 +61,16 @@ function IncreaseAttribute(attr) {
 
 
 function ShowPointBuyToggle() {
-	Array.from(document.getElementsByClassName("ShowPointBuy")).forEach((item, i) => {
+	Array.from(document.getElementsByClassName("ShowPointBuyToggleXS")).forEach((item, i) => {
 		item.classList.toggle("d-none");
+	});
+
+	Array.from(document.getElementsByClassName("ShowPointBuyToggleSM")).forEach((item, i) => {
+		item.classList.toggle("d-sm-block");
+	});
+
+	Array.from(document.getElementsByClassName("ShowPointBuyToggleMD")).forEach((item, i) => {
+		item.classList.toggle("d-md-block");
 	});
 }
 
@@ -48,17 +78,24 @@ function ShowPointBuyToggle() {
 
 
 function UpdateAttributeDerivatives(attr) {
-	var stat = parseInt(document.getElementById(attr + "Attribute").value);
+	var base = parseInt(document.getElementById(attr + "Base").value);
+	var stat = base
+		+ (document.getElementById(attr + "RacialBonusCheck").checked == true ? 2 : 0)
+		+ (document.getElementById(attr + "ClassBonusCheck").checked == true ? 2 : 0);
 	var mod = Math.floor((stat-10)/2);
 
 	var pointBuy;
 
 	if (attr != "AttributeModal") {
-		document.getElementById(attr + "StatButtonForXS").innerHTML = stat;
+		document.getElementById(attr + "StatButtonForXS").innerHTML = base
+			+ (base != stat ? " (" + stat + ")" : "");
+		document.getElementById(attr + "BonusButtonForSM").innerHTML = (base == stat ? "-" : "+" + (stat - base));
+		document.getElementById(attr + "StatAndMod").innerHTML = stat + " (" + (mod >= 0 ? "+" : "") + mod + ")";
 	}
-	document.getElementById(attr + "Mod").innerHTML = (mod >= 0 ? "+" : "") + String(mod);
+	document.getElementById(attr + "Stat").innerHTML = stat;
+	document.getElementById(attr + "Mod").innerHTML = (mod >= 0 ? "+" : "") + mod;
 
-	switch(stat) {
+	switch(base) {
 		case 18:
 			pointBuy = 16;
 			break;
@@ -72,7 +109,7 @@ function UpdateAttributeDerivatives(attr) {
 			pointBuy = 8;
 			break;
 		default:
-			pointBuy = stat - 8;
+			pointBuy = base - 8;
 			break;
 	}
 
