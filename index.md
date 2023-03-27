@@ -120,7 +120,6 @@
 			{% comment %} Strength Mod {% endcomment -%}
 			<div class="col col-4 d-sm-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleXS ShowPointBuyToggleMD"
 				id="StrengthMod">+0</div>
-			{% comment %} Strength Column Wrap {% endcomment -%}
 		</div>
 
 		{% comment %} Constitution {% endcomment -%}
@@ -188,7 +187,6 @@
 			{% comment %} Constitution Mod {% endcomment -%}
 			<div class="col col-4 d-sm-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleXS ShowPointBuyToggleMD"
 				id="ConstitutionMod">+0</div>
-			{% comment %} Constitution Column Wrap {% endcomment -%}
 		</div>
 
 		{% comment %} Dexterity {% endcomment -%}
@@ -256,7 +254,6 @@
 			{% comment %} Dexterity Mod {% endcomment -%}
 			<div class="col col-4 d-sm-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleXS ShowPointBuyToggleMD"
 				id="DexterityMod">+0</div>
-			{% comment %} Dexterity Column Wrap {% endcomment -%}
 		</div>
 
 		{% comment %} Intelligence {% endcomment -%}
@@ -324,7 +321,6 @@
 			{% comment %} Intelligence Mod {% endcomment -%}
 			<div class="col col-4 d-sm-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleXS ShowPointBuyToggleMD"
 				id="IntelligenceMod">+0</div>
-			{% comment %} Intelligence Column Wrap {% endcomment -%}
 		</div>
 
 		{% comment %} Wisdom {% endcomment -%}
@@ -392,7 +388,6 @@
 			{% comment %} Wisdom Mod {% endcomment -%}
 			<div class="col col-4 d-sm-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleXS ShowPointBuyToggleMD"
 				id="WisdomMod">+0</div>
-			{% comment %} Wisdom Column Wrap {% endcomment -%}
 		</div>
 
 		{% comment %} Charisma {% endcomment -%}
@@ -460,7 +455,6 @@
 			{% comment %} Charisma Mod {% endcomment -%}
 			<div class="col col-4 d-sm-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleXS ShowPointBuyToggleMD"
 				id="CharismaMod">+0</div>
-			{% comment %} Charisma Column Wrap {% endcomment -%}
 		</div>
 
 		{% comment %} Point Buy Total {% endcomment -%}
