@@ -3,7 +3,9 @@
 	<h2 id="Character">Character</h2>
 	<div class="container mt-3">
 		<div class="row align-items-center">
-			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">Name</div>
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">
+				<label for="CharacterName">Name</label>
+			</div>
 			<div class="col col-8 col-sm-9 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
 				<input class="form-control"
 					id="CharacterName">
@@ -46,7 +48,9 @@
 			<div class="w-100"></div>
 
 			{% comment %} Strength Label {% endcomment -%}
-			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">Strength</div>
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">
+				<label for="StrengthAttribute">Strength</label>
+			</div>
 			{% comment %} Strength Button for XS Screens {% endcomment -%}
 			<div class="col col-4 d-sm-none">
 				<button class="btn btn-secondary w-100"
@@ -82,7 +86,9 @@
 			<div class="w-100"></div>
 
 			{% comment %} Constitution Label {% endcomment -%}
-			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">Constitution</div>
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">
+				<label for="ConstitutionAttribute">Constitution</label>
+			</div>
 			{% comment %} Constitution Button for XS Screens {% endcomment -%}
 			<div class="col col-4 d-sm-none">
 				<button class="btn btn-secondary w-100"
@@ -118,7 +124,9 @@
 			<div class="w-100"></div>
 
 			{% comment %} Dexterity Label {% endcomment -%}
-			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">Dexterity</div>
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">
+				<label for="DexterityAttribute">Dexterity</label>
+			</div>
 			{% comment %} Dexterity Button for XS Screens {% endcomment -%}
 			<div class="col col-4 d-sm-none">
 				<button class="btn btn-secondary w-100"
@@ -154,7 +162,9 @@
 			<div class="w-100"></div>
 
 			{% comment %} Intelligence Label {% endcomment -%}
-			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">Intelligence</div>
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">
+				<label for="IntelligenceAttribute">Intelligence</label>
+			</div>
 			{% comment %} Intelligence Button for XS Screens {% endcomment -%}
 			<div class="col col-4 d-sm-none">
 				<button class="btn btn-secondary w-100"
@@ -190,7 +200,9 @@
 			<div class="w-100"></div>
 
 			{% comment %} Wisdom Label {% endcomment -%}
-			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">Wisdom</div>
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">
+				<label for="WisdomAttribute">Wisdom</label>
+			</div>
 			{% comment %} Wisdom Button for XS Screens {% endcomment -%}
 			<div class="col col-4 d-sm-none">
 				<button class="btn btn-secondary w-100"
@@ -226,7 +238,9 @@
 			<div class="w-100"></div>
 
 			{% comment %} Charisma Label {% endcomment -%}
-			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">Charisma</div>
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1 text-start">
+				<label for="CharismaAttribute">Charisma</label>
+			</div>
 			{% comment %} Charisma Button for XS Screens {% endcomment -%}
 			<div class="col col-4 d-sm-none">
 				<button class="btn btn-secondary w-100"
