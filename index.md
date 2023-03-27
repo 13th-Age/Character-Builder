@@ -1,5 +1,23 @@
+{% comment %} Character {% endcomment -%}
 <div class="container mt-3">
-	<h2 id="headingAttributes">Attributes</h2>
+	<h2 id="Character">Character</h2>
+	<div class="container mt-3">
+		<div class="row align-items-center">
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">Name</div>
+			<div class="col col-8 col-sm-9 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+				<input class="form-control"
+					id="CharacterName">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+{% comment %} Attributes {% endcomment -%}
+<div class="container mt-3">
+	<h2 id="Attributes">Attributes</h2>
 	<div class="container mt-3">
 		<div class="row align-items-center">
 			{% comment %} Buttons {% endcomment -%}
@@ -328,7 +346,11 @@
 		<ul class="nav nav-pills">
 			<li class="nav-item">
 				<a class="nav-link"
-					href="#headingAttributes">Attributes</a>
+					href="#Character">Character</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"
+					href="#Attributes">Attributes</a>
 			</li>
 		</ul>
 	</div>
