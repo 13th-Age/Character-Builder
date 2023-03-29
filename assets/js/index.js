@@ -1,14 +1,14 @@
-function AttributeBonusModalOpen(attr) {
+function AttributeBonusModal_Open(attr) {
 	document.getElementById("AttributeBonusModalLabel").innerHTML = attr + " Bonuses";
 	document.getElementById("AttributeBonusRacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
 	document.getElementById("AttributeBonusClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
-	document.getElementById("AttributeBonusModalSaveButton").setAttribute("onclick","AttributeBonusModalSave('" + attr + "')");
+	document.getElementById("AttributeBonusModalSaveButton").setAttribute("onclick","AttributeBonusModal_Save('" + attr + "')");
 }
 
 
 
 
-function AttributeBonusModalSave(attr) {
+function AttributeBonusModal_Save(attr) {
 	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeBonusRacialBonusCheck").checked;
 	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeBonusClassBonusCheck").checked;
 
@@ -18,12 +18,12 @@ function AttributeBonusModalSave(attr) {
 
 
 
-function AttributeModalOpen(attr) {
+function AttributeModal_Open(attr) {
 	document.getElementById("AttributeModalLabel").innerHTML = attr + " Attribute";
 	document.getElementById("AttributeModalBase").value = document.getElementById(attr + "Base").value;
 	document.getElementById("AttributeModalRacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
 	document.getElementById("AttributeModalClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
-	document.getElementById("AttributeModalSaveButton").setAttribute("onclick","AttributeModalSave('" + attr + "')");
+	document.getElementById("AttributeModalSaveButton").setAttribute("onclick","AttributeModal_Save('" + attr + "')");
 
 	UpdateAttributeDerivatives("AttributeModal");
 }
@@ -31,7 +31,7 @@ function AttributeModalOpen(attr) {
 
 
 
-function AttributeModalSave(attr) {
+function AttributeModal_Save(attr) {
 	document.getElementById(attr + "Base").value = document.getElementById("AttributeModalBase").value;
 	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeModalRacialBonusCheck").checked;
 	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeModalClassBonusCheck").checked;

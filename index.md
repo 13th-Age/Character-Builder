@@ -66,7 +66,7 @@
 					id="StrengthStatButtonForXS"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeModal"
-					onclick="AttributeModalOpen('Strength')">10</button>
+					onclick="AttributeModal_Open('Strength')">10</button>
 			</div>
 			{% comment %} Strength Attribute for not XS screens {% endcomment -%}
 			<div class="col d-none d-sm-block col-sm-4 col-md-3 col-lg-2">
@@ -92,7 +92,7 @@
 					id="StrengthBonusButtonForSM"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeBonusModal"
-					onclick="AttributeBonusModalOpen('Strength')">-</button>
+					onclick="AttributeBonusModal_Open('Strength')">-</button>
 			</div>
 			{% comment %} Strength Racial Bonus {% endcomment -%}
 			<div class="col d-none d-md-block col-md-2 col-lg-1">
@@ -133,7 +133,7 @@
 					id="ConstitutionStatButtonForXS"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeModal"
-					onclick="AttributeModalOpen('Constitution')">10</button>
+					onclick="AttributeModal_Open('Constitution')">10</button>
 			</div>
 			{% comment %} Constitution Attribute for not XS screens {% endcomment -%}
 			<div class="col d-none d-sm-block col-sm-4 col-md-3 col-lg-2">
@@ -159,7 +159,7 @@
 					id="ConstitutionBonusButtonForSM"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeBonusModal"
-					onclick="AttributeBonusModalOpen('Constitution')">-</button>
+					onclick="AttributeBonusModal_Open('Constitution')">-</button>
 			</div>
 			{% comment %} Constitution Racial Bonus {% endcomment -%}
 			<div class="col d-none d-md-block col-md-2 col-lg-1">
@@ -200,7 +200,7 @@
 					id="DexterityStatButtonForXS"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeModal"
-					onclick="AttributeModalOpen('Dexterity')">10</button>
+					onclick="AttributeModal_Open('Dexterity')">10</button>
 			</div>
 			{% comment %} Dexterity Attribute for not XS screens {% endcomment -%}
 			<div class="col d-none d-sm-block col-sm-4 col-md-3 col-lg-2">
@@ -226,7 +226,7 @@
 					id="DexterityBonusButtonForSM"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeBonusModal"
-					onclick="AttributeBonusModalOpen('Dexterity')">-</button>
+					onclick="AttributeBonusModal_Open('Dexterity')">-</button>
 			</div>
 			{% comment %} Dexterity Racial Bonus {% endcomment -%}
 			<div class="col d-none d-md-block col-md-2 col-lg-1">
@@ -267,7 +267,7 @@
 					id="IntelligenceStatButtonForXS"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeModal"
-					onclick="AttributeModalOpen('Intelligence')">10</button>
+					onclick="AttributeModal_Open('Intelligence')">10</button>
 			</div>
 			{% comment %} Intelligence Attribute for not XS screens {% endcomment -%}
 			<div class="col d-none d-sm-block col-sm-4 col-md-3 col-lg-2">
@@ -293,7 +293,7 @@
 					id="IntelligenceBonusButtonForSM"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeBonusModal"
-					onclick="AttributeBonusModalOpen('Intelligence')">-</button>
+					onclick="AttributeBonusModal_Open('Intelligence')">-</button>
 			</div>
 			{% comment %} Intelligence Racial Bonus {% endcomment -%}
 			<div class="col d-none d-md-block col-md-2 col-lg-1">
@@ -334,7 +334,7 @@
 					id="WisdomStatButtonForXS"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeModal"
-					onclick="AttributeModalOpen('Wisdom')">10</button>
+					onclick="AttributeModal_Open('Wisdom')">10</button>
 			</div>
 			{% comment %} Wisdom Attribute for not XS screens {% endcomment -%}
 			<div class="col d-none d-sm-block col-sm-4 col-md-3 col-lg-2">
@@ -360,7 +360,7 @@
 					id="WisdomBonusButtonForSM"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeBonusModal"
-					onclick="AttributeBonusModalOpen('Wisdom')">-</button>
+					onclick="AttributeBonusModal_Open('Wisdom')">-</button>
 			</div>
 			{% comment %} Wisdom Racial Bonus {% endcomment -%}
 			<div class="col d-none d-md-block col-md-2 col-lg-1">
@@ -401,7 +401,7 @@
 					id="CharismaStatButtonForXS"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeModal"
-					onclick="AttributeModalOpen('Charisma')">10</button>
+					onclick="AttributeModal_Open('Charisma')">10</button>
 			</div>
 			{% comment %} Charisma Attribute for not XS screens {% endcomment -%}
 			<div class="col d-none d-sm-block col-sm-4 col-md-3 col-lg-2">
@@ -427,7 +427,7 @@
 					id="CharismaBonusButtonForSM"
 					data-bs-toggle="modal"
 					data-bs-target="#AttributeBonusModal"
-					onclick="AttributeBonusModalOpen('Charisma')">-</button>
+					onclick="AttributeBonusModal_Open('Charisma')">-</button>
 			</div>
 			{% comment %} Charisma Racial Bonus {% endcomment -%}
 			<div class="col d-none d-md-block col-md-2 col-lg-1">
