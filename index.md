@@ -8,7 +8,8 @@
 			</div>
 			<div class="col col-8 col-sm-9 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
 				<input class="form-control"
-					id="CharacterName">
+					id="CharacterName"
+					onchange="this.value = this.value.trim()">
 			</div>
 		</div>
 	</div>
