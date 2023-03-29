@@ -1,16 +1,16 @@
 function AttributeBonusModal_Open(attr) {
-	document.getElementById("AttributeBonusModalLabel").innerHTML = attr + " Bonuses";
-	document.getElementById("AttributeBonusRacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
-	document.getElementById("AttributeBonusClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
-	document.getElementById("AttributeBonusModalSaveButton").setAttribute("onclick","AttributeBonusModal_Save('" + attr + "')");
+	document.getElementById("AttributeBonusModal_Label").innerHTML = attr + " Bonuses";
+	document.getElementById("AttributeBonusModal_RacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
+	document.getElementById("AttributeBonusModal_ClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
+	document.getElementById("AttributeBonusModal_SaveButton").setAttribute("onclick","AttributeBonusModal_Save('" + attr + "')");
 }
 
 
 
 
 function AttributeBonusModal_Save(attr) {
-	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeBonusRacialBonusCheck").checked;
-	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeBonusClassBonusCheck").checked;
+	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeBonusModal_RacialBonusCheck").checked;
+	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeBonusModal_ClassBonusCheck").checked;
 
 	UpdateAttributeDerivatives(attr);
 }
@@ -19,22 +19,22 @@ function AttributeBonusModal_Save(attr) {
 
 
 function AttributeModal_Open(attr) {
-	document.getElementById("AttributeModalLabel").innerHTML = attr + " Attribute";
-	document.getElementById("AttributeModalBase").value = document.getElementById(attr + "Base").value;
-	document.getElementById("AttributeModalRacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
-	document.getElementById("AttributeModalClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
-	document.getElementById("AttributeModalSaveButton").setAttribute("onclick","AttributeModal_Save('" + attr + "')");
+	document.getElementById("AttributeModal_Label").innerHTML = attr + " Attribute";
+	document.getElementById("AttributeModal_Base").value = document.getElementById(attr + "Base").value;
+	document.getElementById("AttributeModal_RacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
+	document.getElementById("AttributeModal_ClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
+	document.getElementById("AttributeModal_SaveButton").setAttribute("onclick","AttributeModal_Save('" + attr + "')");
 
-	UpdateAttributeDerivatives("AttributeModal");
+	UpdateAttributeDerivatives("AttributeModal_");
 }
 
 
 
 
 function AttributeModal_Save(attr) {
-	document.getElementById(attr + "Base").value = document.getElementById("AttributeModalBase").value;
-	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeModalRacialBonusCheck").checked;
-	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeModalClassBonusCheck").checked;
+	document.getElementById(attr + "Base").value = document.getElementById("AttributeModal_Base").value;
+	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeModal_RacialBonusCheck").checked;
+	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeModal_ClassBonusCheck").checked;
 
 	UpdateAttributeDerivatives(attr);
 }
@@ -86,7 +86,7 @@ function UpdateAttributeDerivatives(attr) {
 
 	var pointBuy;
 
-	if (attr != "AttributeModal") {
+	if (attr != "AttributeModal_") {
 		document.getElementById(attr + "StatButtonForXS").innerHTML = base
 			+ (base != stat ? " (" + stat + ")" : "");
 		document.getElementById(attr + "BonusButtonForSM").innerHTML = (base == stat ? "-" : "+" + (stat - base));

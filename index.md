@@ -477,7 +477,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h1 class="modal-title fs-5"
-					id="AttributeModalLabel">Attribute Modal</h1>
+					id="AttributeModal_Label">Attribute Modal</h1>
 				<button class="btn-close"
 					type="button"
 					data-bs-dismiss="modal"></button>
@@ -490,14 +490,14 @@
 						<div class="input-group">
 							<button class="btn btn-outline-secondary"
 								type="button"
-								onclick="DecreaseAttribute('AttributeModal')">–</button>
+								onclick="DecreaseAttribute('AttributeModal_')">–</button>
 							<input class="form-control text-center"
 								type="number"
-								id="AttributeModalBase"
+								id="AttributeModal_Base"
 								value="10" min="8" max="18">
 							<button class="btn btn-outline-secondary"
 								type="button"
-								onclick="IncreaseAttribute('AttributeModal')">+</button>
+								onclick="IncreaseAttribute('AttributeModal_')">+</button>
 						</div>
 					</div>
 					<div class="w-100"></div>
@@ -505,43 +505,43 @@
 					{% comment %} Point Buy {% endcomment -%}
 					<div class="col d-none col-6 ShowPointBuyToggleXS">Point Buy</div>
 					<div class="col d-none col-6 text-center ShowPointBuyToggleXS"
-						id="AttributeModalPointBuy">2</div>
+						id="AttributeModal_PointBuy">2</div>
 					<div class="w-100"></div>
 
 					{% comment %} Racial Bonus {% endcomment -%}
 					<div class="col col-6">
-						<label for="AttributeModalRacialBonusCheck">Racial Bonus</label>
+						<label for="AttributeModal_RacialBonusCheck">Racial Bonus</label>
 					</div>
 					<div class="col col-6 text-center">
 						<input class="form-check-input"
 							type="checkbox"
-							id="AttributeModalRacialBonusCheck"
-							oninput="UpdateAttributeDerivatives('AttributeModal')">
+							id="AttributeModal_RacialBonusCheck"
+							oninput="UpdateAttributeDerivatives('AttributeModal_')">
 					</div>
 					<div class="w-100"></div>
 
 					{% comment %} Class Bonus {% endcomment -%}
 					<div class="col col-6">
-						<label for="AttributeModalClassBonusCheck">Class Bonus</label>
+						<label for="AttributeModal_ClassBonusCheck">Class Bonus</label>
 					</div>
 					<div class="col col-6 text-center">
 						<input class="form-check-input"
 							type="checkbox"
-							id="AttributeModalClassBonusCheck"
-							oninput="UpdateAttributeDerivatives('AttributeModal')">
+							id="AttributeModal_ClassBonusCheck"
+							oninput="UpdateAttributeDerivatives('AttributeModal_')">
 					</div>
 					<div class="w-100"></div>
 
 					{% comment %} Stat {% endcomment -%}
 					<div class="col col-6">Stat</div>
 					<div class="col col-6 text-center"
-						id="AttributeModalStat">10</div>
+						id="AttributeModal_Stat">10</div>
 					<div class="w-100"></div>
 
 					{% comment %} Mod {% endcomment -%}
 					<div class="col col-6">Mod</div>
 					<div class="col col-6 text-center"
-						id="AttributeModalMod">+0</div>
+						id="AttributeModal_Mod">+0</div>
 					<div class="w-100"></div>
 				</div>
 			</div>
@@ -551,7 +551,7 @@
 					data-bs-dismiss="modal">Close</button>
 				<button class="btn btn-primary"
 					type="button"
-					id="AttributeModalSaveButton"
+					id="AttributeModal_SaveButton"
 					data-bs-dismiss="modal">Save changes</button>
 			</div>
 		</div>
@@ -569,7 +569,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h1 class="modal-title fs-5"
-					id="AttributeBonusModalLabel">Attribute Bonus Modal</h1>
+					id="AttributeBonusModal_Label">Attribute Bonus Modal</h1>
 				<button class="btn-close"
 					type="button"
 					data-bs-dismiss="modal"></button>
@@ -581,7 +581,7 @@
 					<div class="col col-6">
 						<input class="form-check-input"
 							type="checkbox"
-							id="AttributeBonusRacialBonusCheck">
+							id="AttributeBonusModal_RacialBonusCheck">
 					</div>
 					<div class="w-100"></div>
 
@@ -590,7 +590,7 @@
 					<div class="col col-6">
 						<input class="form-check-input"
 							type="checkbox"
-							id="AttributeBonusClassBonusCheck">
+							id="AttributeBonusModal_ClassBonusCheck">
 					</div>
 					<div class="w-100"></div>
 				</div>
@@ -601,7 +601,7 @@
 					data-bs-dismiss="modal">Close</button>
 				<button class="btn btn-primary"
 					type="button"
-					id="AttributeBonusModalSaveButton"
+					id="AttributeBonusModal_SaveButton"
 					data-bs-dismiss="modal">Save changes</button>
 			</div>
 		</div>
