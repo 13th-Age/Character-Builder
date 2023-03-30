@@ -34,6 +34,7 @@
 						<input class="form-check-input"
 							type="checkbox"
 							id="ShowPointBuyCheck"
+							form=""
 							role="switch"
 							onchange="ShowPointBuyToggle()">
 						<label class="form-check-label"
