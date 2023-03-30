@@ -157,29 +157,31 @@ function UpdateAttributeDerivatives(attr) {
 function OnDocumentLoad() {
 	var form = document.getElementById("AttributeForm");
 
-	form.StrengthBase.value = sessionStorage.StrengthBase;
-	form.StrengthRacialBonusCheck.checked = JSON.parse(sessionStorage.StrengthRacialBonusCheck);
-	form.StrengthClassBonusCheck.checked = JSON.parse(sessionStorage.StrengthClassBonusCheck);
+	if (sessionStorage.length != 0) {
+		form.StrengthBase.value = sessionStorage.StrengthBase;
+		form.StrengthRacialBonusCheck.checked = JSON.parse(sessionStorage.StrengthRacialBonusCheck);
+		form.StrengthClassBonusCheck.checked = JSON.parse(sessionStorage.StrengthClassBonusCheck);
 
-	form.ConstitutionBase.value = sessionStorage.ConstitutionBase;
-	form.ConstitutionRacialBonusCheck.checked = JSON.parse(sessionStorage.ConstitutionRacialBonusCheck);
-	form.ConstitutionClassBonusCheck.checked = JSON.parse(sessionStorage.ConstitutionClassBonusCheck);
+		form.ConstitutionBase.value = sessionStorage.ConstitutionBase;
+		form.ConstitutionRacialBonusCheck.checked = JSON.parse(sessionStorage.ConstitutionRacialBonusCheck);
+		form.ConstitutionClassBonusCheck.checked = JSON.parse(sessionStorage.ConstitutionClassBonusCheck);
 
-	form.DexterityBase.value = sessionStorage.DexterityBase;
-	form.DexterityRacialBonusCheck.checked = JSON.parse(sessionStorage.DexterityRacialBonusCheck);
-	form.DexterityClassBonusCheck.checked = JSON.parse(sessionStorage.DexterityClassBonusCheck);
+		form.DexterityBase.value = sessionStorage.DexterityBase;
+		form.DexterityRacialBonusCheck.checked = JSON.parse(sessionStorage.DexterityRacialBonusCheck);
+		form.DexterityClassBonusCheck.checked = JSON.parse(sessionStorage.DexterityClassBonusCheck);
 
-	form.IntelligenceBase.value = sessionStorage.IntelligenceBase;
-	form.IntelligenceRacialBonusCheck.checked = JSON.parse(sessionStorage.IntelligenceRacialBonusCheck);
-	form.IntelligenceClassBonusCheck.checked = JSON.parse(sessionStorage.IntelligenceClassBonusCheck);
+		form.IntelligenceBase.value = sessionStorage.IntelligenceBase;
+		form.IntelligenceRacialBonusCheck.checked = JSON.parse(sessionStorage.IntelligenceRacialBonusCheck);
+		form.IntelligenceClassBonusCheck.checked = JSON.parse(sessionStorage.IntelligenceClassBonusCheck);
 
-	form.WisdomBase.value = sessionStorage.WisdomBase;
-	form.WisdomRacialBonusCheck.checked = JSON.parse(sessionStorage.WisdomRacialBonusCheck);
-	form.WisdomClassBonusCheck.checked = JSON.parse(sessionStorage.WisdomClassBonusCheck);
+		form.WisdomBase.value = sessionStorage.WisdomBase;
+		form.WisdomRacialBonusCheck.checked = JSON.parse(sessionStorage.WisdomRacialBonusCheck);
+		form.WisdomClassBonusCheck.checked = JSON.parse(sessionStorage.WisdomClassBonusCheck);
 
-	form.CharismaBase.value = sessionStorage.CharismaBase;
-	form.CharismaRacialBonusCheck.checked = JSON.parse(sessionStorage.CharismaRacialBonusCheck);
-	form.CharismaClassBonusCheck.checked = JSON.parse(sessionStorage.CharismaClassBonusCheck);
+		form.CharismaBase.value = sessionStorage.CharismaBase;
+		form.CharismaRacialBonusCheck.checked = JSON.parse(sessionStorage.CharismaRacialBonusCheck);
+		form.CharismaClassBonusCheck.checked = JSON.parse(sessionStorage.CharismaClassBonusCheck);
+	}
 
 	UpdateAttributeDerivatives("Strength");
 	UpdateAttributeDerivatives("Constitution");
