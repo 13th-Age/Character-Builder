@@ -44,16 +44,16 @@
 
 		{% comment %} Headings {% endcomment -%}
 		<div class="row mt-2 gy-2 align-items-center text-center">
-			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1">Attribute</div>
-			<div class="col col-4 d-sm-none">Stat</div>
-			<div class="col d-none d-sm-block col-sm-4 col-md-3 col-lg-2">Base</div>
-			<div class="col d-none d-sm-block col-sm-2 d-md-none">Bonus</div>
-			<div class="col d-none d-md-block col-md-2 col-lg-1">Racial Bonus</div>
-			<div class="col d-none d-md-block col-md-2 col-lg-1">Class Bonus</div>
-			<div class="col d-none col-4 col-sm-3 col-md-2 col-lg-1 ShowPointBuyToggleXS">Point Buy</div>
-			<div class="col d-none d-sm-block col-sm-3 d-md-none ShowPointBuyToggleSM">Stat (Mod)</div>
-			<div class="col d-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleMD">Stat</div>
-			<div class="col col-4 d-sm-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleXS ShowPointBuyToggleMD">Mod</div>
+			<div class="col col-4 col-sm-3 col-md-2 col-xxl-1"><b>Attribute</b></div>
+			<div class="col col-4 d-sm-none"><b>Stat</b></div>
+			<div class="col d-none d-sm-block col-sm-4 col-md-3 col-lg-2"><b>Base</b></div>
+			<div class="col d-none d-sm-block col-sm-2 d-md-none"><b>Bonus</b></div>
+			<div class="col d-none d-md-block col-md-2 col-lg-1"><b>Racial Bonus</b></div>
+			<div class="col d-none d-md-block col-md-2 col-lg-1"><b>Class Bonus</b></div>
+			<div class="col d-none col-4 col-sm-3 col-md-2 col-lg-1 ShowPointBuyToggleXS"><b>Point Buy</b></div>
+			<div class="col d-none d-sm-block col-sm-3 d-md-none ShowPointBuyToggleSM"><b>Stat (Mod)</b></div>
+			<div class="col d-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleMD"><b>Stat</b></div>
+			<div class="col col-4 d-sm-none d-md-block col-md-1 d-lg-block ShowPointBuyToggleXS ShowPointBuyToggleMD"><b>Mod</b></div>
 		</div>
 
 		{% comment %} Strength {% endcomment -%}
