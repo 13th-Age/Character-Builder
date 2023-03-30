@@ -1,7 +1,9 @@
 function AttributeBonusModal_Open(attr) {
+	var form = document.getElementById("AttributeBonusModal_Form");
+
 	document.getElementById("AttributeBonusModal_Label").innerHTML = attr + " Bonuses";
-	document.getElementById("AttributeBonusModal_RacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
-	document.getElementById("AttributeBonusModal_ClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
+	form.RacialBonusCheck.checked = JSON.parse(sessionStorage.getItem(attr + "RacialBonusCheck"));
+	form.ClassBonusCheck.checked = JSON.parse(sessionStorage.getItem(attr + "ClassBonusCheck"));
 	document.getElementById("AttributeBonusModal_SaveButton").setAttribute("onclick","AttributeBonusModal_Save('" + attr + "')");
 }
 
@@ -9,8 +11,10 @@ function AttributeBonusModal_Open(attr) {
 
 
 function AttributeBonusModal_Save(attr) {
-	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeBonusModal_RacialBonusCheck").checked;
-	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeBonusModal_ClassBonusCheck").checked;
+	var form = document.getElementById("AttributeBonusModal_Form");
+
+	document.getElementById(attr + "RacialBonusCheck").checked = form.AttributeBonusModal_RacialBonusCheck.checked;
+	document.getElementById(attr + "ClassBonusCheck").checked = form.AttributeBonusModal_ClassBonusCheck.checked;
 
 	UpdateAttributeDerivatives(attr);
 }
@@ -19,10 +23,12 @@ function AttributeBonusModal_Save(attr) {
 
 
 function AttributeModal_Open(attr) {
+	var form = document.getElementById("AttributeModal_Form");
+
 	document.getElementById("AttributeModal_Label").innerHTML = attr + " Attribute";
-	document.getElementById("AttributeModal_Base").value = document.getElementById(attr + "Base").value;
-	document.getElementById("AttributeModal_RacialBonusCheck").checked = document.getElementById(attr + "RacialBonusCheck").checked;
-	document.getElementById("AttributeModal_ClassBonusCheck").checked = document.getElementById(attr + "ClassBonusCheck").checked;
+	form.AttributeBase.value = sessionStorage.getItem(attr + "Base");
+	form.RacialBonusCheck.checked = JSON.parse(sessionStorage.getItem(attr + "RacialBonusCheck"));
+	form.ClassBonusCheck.checked = JSON.parse(sessionStorage.getItem(attr + "ClassBonusCheck"));
 	document.getElementById("AttributeModal_SaveButton").setAttribute("onclick","AttributeModal_Save('" + attr + "')");
 
 	UpdateAttributeDerivatives("AttributeModal_");
@@ -32,11 +38,27 @@ function AttributeModal_Open(attr) {
 
 
 function AttributeModal_Save(attr) {
-	document.getElementById(attr + "Base").value = document.getElementById("AttributeModal_Base").value;
-	document.getElementById(attr + "RacialBonusCheck").checked = document.getElementById("AttributeModal_RacialBonusCheck").checked;
-	document.getElementById(attr + "ClassBonusCheck").checked = document.getElementById("AttributeModal_ClassBonusCheck").checked;
+	var form = document.getElementById("AttributeModal_Form");
+
+	document.getElementById(attr + "Base").value = form.AttributeBase.value;
+	document.getElementById(attr + "RacialBonusCheck").checked = form.RacialBonusCheck.checked;
+	document.getElementById(attr + "ClassBonusCheck").checked = form.ClassBonusCheck.checked;
 
 	UpdateAttributeDerivatives(attr);
+}
+
+
+
+
+function AttributeForm_Reset() {
+	setTimeout(function(){
+		UpdateAttributeDerivatives("Strength");
+		UpdateAttributeDerivatives("Constitution");
+		UpdateAttributeDerivatives("Dexterity");
+		UpdateAttributeDerivatives("Intelligence");
+		UpdateAttributeDerivatives("Wisdom");
+		UpdateAttributeDerivatives("Charisma");
+	},0);
 }
 
 
@@ -79,12 +101,18 @@ function ShowPointBuyToggle() {
 
 function UpdateAttributeDerivatives(attr) {
 	var base = parseInt(document.getElementById(attr + "Base").value);
-	var stat = base
-		+ (document.getElementById(attr + "RacialBonusCheck").checked == true ? 2 : 0)
-		+ (document.getElementById(attr + "ClassBonusCheck").checked == true ? 2 : 0);
-	var mod = Math.floor((stat-10)/2);
+	var racialBonusCheck = document.getElementById(attr + "RacialBonusCheck").checked;
+	var classBonusCheck = document.getElementById(attr + "ClassBonusCheck").checked;
 
+	var stat = base
+		+ (racialBonusCheck == true ? 2 : 0)
+		+ (classBonusCheck == true ? 2 : 0);
+	var mod = Math.floor((stat-10)/2);
 	var pointBuy;
+
+	sessionStorage.setItem(attr + "Base",base);
+	sessionStorage.setItem(attr + "RacialBonusCheck",racialBonusCheck);
+	sessionStorage.setItem(attr + "ClassBonusCheck",classBonusCheck);
 
 	if (attr != "AttributeModal_") {
 		document.getElementById(attr + "StatButtonForXS").innerHTML = base
@@ -127,6 +155,32 @@ function UpdateAttributeDerivatives(attr) {
 
 
 function OnDocumentLoad() {
+	var form = document.getElementById("AttributeForm");
+
+	form.StrengthBase.value = sessionStorage.StrengthBase;
+	form.StrengthRacialBonusCheck.checked = JSON.parse(sessionStorage.StrengthRacialBonusCheck);
+	form.StrengthClassBonusCheck.checked = JSON.parse(sessionStorage.StrengthClassBonusCheck);
+
+	form.ConstitutionBase.value = sessionStorage.ConstitutionBase;
+	form.ConstitutionRacialBonusCheck.checked = JSON.parse(sessionStorage.ConstitutionRacialBonusCheck);
+	form.ConstitutionClassBonusCheck.checked = JSON.parse(sessionStorage.ConstitutionClassBonusCheck);
+
+	form.DexterityBase.value = sessionStorage.DexterityBase;
+	form.DexterityRacialBonusCheck.checked = JSON.parse(sessionStorage.DexterityRacialBonusCheck);
+	form.DexterityClassBonusCheck.checked = JSON.parse(sessionStorage.DexterityClassBonusCheck);
+
+	form.IntelligenceBase.value = sessionStorage.IntelligenceBase;
+	form.IntelligenceRacialBonusCheck.checked = JSON.parse(sessionStorage.IntelligenceRacialBonusCheck);
+	form.IntelligenceClassBonusCheck.checked = JSON.parse(sessionStorage.IntelligenceClassBonusCheck);
+
+	form.WisdomBase.value = sessionStorage.WisdomBase;
+	form.WisdomRacialBonusCheck.checked = JSON.parse(sessionStorage.WisdomRacialBonusCheck);
+	form.WisdomClassBonusCheck.checked = JSON.parse(sessionStorage.WisdomClassBonusCheck);
+
+	form.CharismaBase.value = sessionStorage.CharismaBase;
+	form.CharismaRacialBonusCheck.checked = JSON.parse(sessionStorage.CharismaRacialBonusCheck);
+	form.CharismaClassBonusCheck.checked = JSON.parse(sessionStorage.CharismaClassBonusCheck);
+
 	UpdateAttributeDerivatives("Strength");
 	UpdateAttributeDerivatives("Constitution");
 	UpdateAttributeDerivatives("Dexterity");

@@ -19,6 +19,7 @@
 
 
 {% comment %} Attributes {% endcomment -%}
+<form id="AttributeForm">
 <div class="container mt-3">
 	<h2 id="Attributes">Attributes</h2>
 	<div class="container mt-3">
@@ -78,6 +79,7 @@
 					<input class="form-control text-center"
 						type="number"
 						id="StrengthBase"
+						name="StrengthBase"
 						value="10" min="8" max="18"
 						onchange="UpdateAttributeDerivatives('Strength')">
 					<button class="btn btn-outline-secondary"
@@ -100,6 +102,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="StrengthRacialBonusCheck"
+					name="StrengthRacialBonusCheck"
 					oninput="UpdateAttributeDerivatives('Strength')">
 			</div>
 			{% comment %} Strength Class Bonus {% endcomment -%}
@@ -107,6 +110,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="StrengthClassBonusCheck"
+					name="StrengthClassBonusCheck"
 					oninput="UpdateAttributeDerivatives('Strength')">
 			</div>
 			{% comment %} Strength Point Buy {% endcomment -%}
@@ -145,6 +149,7 @@
 					<input class="form-control text-center"
 						type="number"
 						id="ConstitutionBase"
+						name="ConstitutionBase"
 						value="10" min="8" max="18"
 						onchange="UpdateAttributeDerivatives('Constitution')">
 					<button class="btn btn-outline-secondary"
@@ -167,6 +172,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="ConstitutionRacialBonusCheck"
+					name="ConstitutionRacialBonusCheck"
 					oninput="UpdateAttributeDerivatives('Constitution')">
 			</div>
 			{% comment %} Constitution Class Bonus {% endcomment -%}
@@ -174,6 +180,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="ConstitutionClassBonusCheck"
+					name="ConstitutionClassBonusCheck"
 					oninput="UpdateAttributeDerivatives('Constitution')">
 			</div>
 			{% comment %} Constitution Point Buy {% endcomment -%}
@@ -212,6 +219,7 @@
 					<input class="form-control text-center"
 						type="number"
 						id="DexterityBase"
+						name="DexterityBase"
 						value="10" min="8" max="18"
 						onchange="UpdateAttributeDerivatives('Dexterity')">
 					<button class="btn btn-outline-secondary"
@@ -234,6 +242,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="DexterityRacialBonusCheck"
+					name="DexterityRacialBonusCheck"
 					oninput="UpdateAttributeDerivatives('Dexterity')">
 			</div>
 			{% comment %} Dexterity Class Bonus {% endcomment -%}
@@ -241,6 +250,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="DexterityClassBonusCheck"
+					name="DexterityClassBonusCheck"
 					oninput="UpdateAttributeDerivatives('Dexterity')">
 			</div>
 			{% comment %} Dexterity Point Buy {% endcomment -%}
@@ -279,6 +289,7 @@
 					<input class="form-control text-center"
 						type="number"
 						id="IntelligenceBase"
+						name="IntelligenceBase"
 						value="10" min="8" max="18"
 						onchange="UpdateAttributeDerivatives('Intelligence')">
 					<button class="btn btn-outline-secondary"
@@ -301,6 +312,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="IntelligenceRacialBonusCheck"
+					name="IntelligenceRacialBonusCheck"
 					oninput="UpdateAttributeDerivatives('Intelligence')">
 			</div>
 			{% comment %} Intelligence Class Bonus {% endcomment -%}
@@ -308,6 +320,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="IntelligenceClassBonusCheck"
+					name="IntelligenceClassBonusCheck"
 					oninput="UpdateAttributeDerivatives('Intelligence')">
 			</div>
 			{% comment %} Intelligence Point Buy {% endcomment -%}
@@ -346,6 +359,7 @@
 					<input class="form-control text-center"
 						type="number"
 						id="WisdomBase"
+						name="WisdomBase"
 						value="10" min="8" max="18"
 						onchange="UpdateAttributeDerivatives('Wisdom')">
 					<button class="btn btn-outline-secondary"
@@ -368,6 +382,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="WisdomRacialBonusCheck"
+					name="WisdomRacialBonusCheck"
 					oninput="UpdateAttributeDerivatives('Wisdom')">
 			</div>
 			{% comment %} Wisdom Class Bonus {% endcomment -%}
@@ -375,6 +390,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="WisdomClassBonusCheck"
+					name="WisdomClassBonusCheck"
 					oninput="UpdateAttributeDerivatives('Wisdom')">
 			</div>
 			{% comment %} Wisdom Point Buy {% endcomment -%}
@@ -413,6 +429,7 @@
 					<input class="form-control text-center"
 						type="number"
 						id="CharismaBase"
+						name="CharismaBase"
 						value="10" min="8" max="18"
 						onchange="UpdateAttributeDerivatives('Charisma')">
 					<button class="btn btn-outline-secondary"
@@ -435,6 +452,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="CharismaRacialBonusCheck"
+					name="CharismaRacialBonusCheck"
 					oninput="UpdateAttributeDerivatives('Charisma')">
 			</div>
 			{% comment %} Charisma Class Bonus {% endcomment -%}
@@ -442,6 +460,7 @@
 				<input class="form-check-input"
 					type="checkbox"
 					id="CharismaClassBonusCheck"
+					name="CharismaClassBonusCheck"
 					oninput="UpdateAttributeDerivatives('Charisma')">
 			</div>
 			{% comment %} Charisma Point Buy {% endcomment -%}
@@ -466,11 +485,13 @@
 		</div>
 	</div>
 </div>
+</form>
 
 
 
 
 {% comment %} Attribute Modal {% endcomment -%}
+<form id="AttributeModal_Form">
 <div class="modal fade"
 	id="AttributeModal"
 	tabindex="-1">
@@ -495,6 +516,7 @@
 							<input class="form-control text-center"
 								type="number"
 								id="AttributeModal_Base"
+								name="AttributeBase"
 								value="10" min="8" max="18">
 							<button class="btn btn-outline-secondary"
 								type="button"
@@ -510,25 +532,23 @@
 					<div class="w-100"></div>
 
 					{% comment %} Racial Bonus {% endcomment -%}
-					<div class="col col-6">
-						<label for="AttributeModal_RacialBonusCheck">Racial Bonus</label>
-					</div>
+					<div class="col col-6">Racial Bonus</div>
 					<div class="col col-6 text-center">
 						<input class="form-check-input"
 							type="checkbox"
 							id="AttributeModal_RacialBonusCheck"
+							name="RacialBonusCheck"
 							oninput="UpdateAttributeDerivatives('AttributeModal_')">
 					</div>
 					<div class="w-100"></div>
 
 					{% comment %} Class Bonus {% endcomment -%}
-					<div class="col col-6">
-						<label for="AttributeModal_ClassBonusCheck">Class Bonus</label>
-					</div>
+					<div class="col col-6">Class Bonus</div>
 					<div class="col col-6 text-center">
 						<input class="form-check-input"
 							type="checkbox"
 							id="AttributeModal_ClassBonusCheck"
+							name="ClassBonusCheck"
 							oninput="UpdateAttributeDerivatives('AttributeModal_')">
 					</div>
 					<div class="w-100"></div>
@@ -558,11 +578,13 @@
 		</div>
 	</div>
 </div>
+</form>
 
 
 
 
 {% comment %} Attribute Bonus Modal {% endcomment -%}
+<form id="AttributeBonusModal_Form">
 <div class="modal fade"
 	id="AttributeBonusModal"
 	tabindex="-1">
@@ -582,7 +604,7 @@
 					<div class="col col-6">
 						<input class="form-check-input"
 							type="checkbox"
-							id="AttributeBonusModal_RacialBonusCheck">
+							name="RacialBonusCheck">
 					</div>
 					<div class="w-100"></div>
 
@@ -591,7 +613,7 @@
 					<div class="col col-6">
 						<input class="form-check-input"
 							type="checkbox"
-							id="AttributeBonusModal_ClassBonusCheck">
+							name="ClassBonusCheck">
 					</div>
 					<div class="w-100"></div>
 				</div>
@@ -606,6 +628,21 @@
 					data-bs-dismiss="modal">Save changes</button>
 			</div>
 		</div>
+	</div>
+</div>
+</form>
+
+
+
+
+{% comment %} Data Management {% endcomment -%}
+<div class="container mt-3">
+	<h2 id="DataManagement">Data Management</h2>
+	<div class="container mt-3">
+		<button class="btn btn-secondary"
+			type="reset"
+			form="AttributeForm"
+			onclick="AttributeForm_Reset()">Reset</button>
 	</div>
 </div>
 
@@ -632,6 +669,10 @@
 				<a class="nav-link"
 					href="#Attributes">Attributes</a>
 			</li>
+				<li class="nav-item">
+					<a class="nav-link"
+						href="#DataManagement">Data Management</a>
+				</li>
 		</ul>
 	</div>
 </div>
