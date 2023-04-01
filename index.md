@@ -1,3 +1,7 @@
+---
+onLoad: "OnDocumentLoad()"
+---
+
 {% comment %} Character {% endcomment -%}
 <div class="container mt-3">
 	<h2 id="Character">Character</h2>
@@ -684,9 +688,3 @@
 
 
 <script src="{{ 'assets/js/index.js?v=' | append: site.github.build_revision }}"></script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-	OnDocumentLoad();
-}, false);
-</script>
