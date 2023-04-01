@@ -13,8 +13,8 @@ function AttributeBonusModal_Open(attr) {
 function AttributeBonusModal_Save(attr) {
 	var form = document.getElementById("AttributeBonusModal_Form");
 
-	document.getElementById(attr + "RacialBonusCheck").checked = form.AttributeBonusModal_RacialBonusCheck.checked;
-	document.getElementById(attr + "ClassBonusCheck").checked = form.AttributeBonusModal_ClassBonusCheck.checked;
+	document.getElementById(attr + "RacialBonusCheck").checked = form.RacialBonusCheck.checked;
+	document.getElementById(attr + "ClassBonusCheck").checked = form.ClassBonusCheck.checked;
 
 	UpdateAttributeDerivatives(attr);
 }
