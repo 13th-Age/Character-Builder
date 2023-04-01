@@ -491,6 +491,20 @@
 
 
 
+{% comment %} Data Management {% endcomment -%}
+<div class="container mt-3">
+	<h2 id="DataManagement">Data Management</h2>
+	<div class="container mt-3">
+		<button class="btn btn-secondary"
+			type="reset"
+			form="AttributeForm"
+			onclick="AttributeForm_Reset()">Reset</button>
+	</div>
+</div>
+
+
+
+
 {% comment %} Attribute Modal {% endcomment -%}
 <form id="AttributeModal_Form">
 <div class="modal fade"
@@ -633,20 +647,6 @@
 	</div>
 </div>
 </form>
-
-
-
-
-{% comment %} Data Management {% endcomment -%}
-<div class="container mt-3">
-	<h2 id="DataManagement">Data Management</h2>
-	<div class="container mt-3">
-		<button class="btn btn-secondary"
-			type="reset"
-			form="AttributeForm"
-			onclick="AttributeForm_Reset()">Reset</button>
-	</div>
-</div>
 
 
 
