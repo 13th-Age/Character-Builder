@@ -518,7 +518,9 @@
 								type="number"
 								id="AttributeModal_Base"
 								name="AttributeBase"
-								value="10" min="8" max="18">
+								value="10" min="8" max="18"
+								oninput="UpdateAttributeDerivatives('AttributeModal_')"
+								required>
 							<button class="btn btn-outline-secondary"
 								type="button"
 								onclick="IncreaseAttribute('AttributeModal_')">+</button>
@@ -572,9 +574,8 @@
 					type="button"
 					data-bs-dismiss="modal">Close</button>
 				<button class="btn btn-primary"
-					type="button"
-					id="AttributeModal_SaveButton"
-					data-bs-dismiss="modal">Save changes</button>
+					type="submit"
+					id="AttributeModal_SaveButton">Save changes</button>
 			</div>
 		</div>
 	</div>
@@ -624,7 +625,7 @@
 					type="button"
 					data-bs-dismiss="modal">Close</button>
 				<button class="btn btn-primary"
-					type="button"
+					type="submit"
 					id="AttributeBonusModal_SaveButton"
 					data-bs-dismiss="modal">Save changes</button>
 			</div>

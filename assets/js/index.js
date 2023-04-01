@@ -4,7 +4,7 @@ function AttributeBonusModal_Open(attr) {
 	document.getElementById("AttributeBonusModal_Label").innerHTML = attr + " Bonuses";
 	form.RacialBonusCheck.checked = JSON.parse(sessionStorage.getItem(attr + "RacialBonusCheck"));
 	form.ClassBonusCheck.checked = JSON.parse(sessionStorage.getItem(attr + "ClassBonusCheck"));
-	document.getElementById("AttributeBonusModal_SaveButton").setAttribute("onclick","AttributeBonusModal_Save('" + attr + "')");
+	form.setAttribute("action","javascript:AttributeBonusModal_Save('" + attr + "')");
 }
 
 
@@ -29,7 +29,7 @@ function AttributeModal_Open(attr) {
 	form.AttributeBase.value = sessionStorage.getItem(attr + "Base");
 	form.RacialBonusCheck.checked = JSON.parse(sessionStorage.getItem(attr + "RacialBonusCheck"));
 	form.ClassBonusCheck.checked = JSON.parse(sessionStorage.getItem(attr + "ClassBonusCheck"));
-	document.getElementById("AttributeModal_SaveButton").setAttribute("onclick","AttributeModal_Save('" + attr + "')");
+	form.setAttribute("action","javascript:AttributeModal_Save('" + attr + "')");
 
 	UpdateAttributeDerivatives("AttributeModal_");
 }
@@ -45,6 +45,8 @@ function AttributeModal_Save(attr) {
 	document.getElementById(attr + "ClassBonusCheck").checked = form.ClassBonusCheck.checked;
 
 	UpdateAttributeDerivatives(attr);
+
+	bootstrap.Modal.getInstance(document.getElementById("AttributeModal")).hide();
 }
 
 
