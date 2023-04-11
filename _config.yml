@@ -1,5 +1,9 @@
-title: "13th Age: Character Builder"
+title: Character Builder
 titles_from_headings:
     enabled: false
 plugins:
     - jekyll-sitemap
+defaults:
+    -
+        values:
+            layout: default
